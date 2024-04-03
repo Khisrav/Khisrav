@@ -5,7 +5,7 @@
 
 - 🌱 I’m currently learning **React, Vue and everything related to it**
 
-- 📫 How to reach me **kh.khisrav2018@gmail.com**
+- 📫 How to reach me **https://t.me/kh_tj**
 
 - ⚡ Fun fact **A mantis shrimp at the size of a human could accelerate all the way to 162.7 miles per hour!**
 
