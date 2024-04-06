@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Khisrav</h1>
 <h3 align="center">A passionate frontend developer</h3>
 
-- 🔭 I’m currently working on [RCONNECT](https://rconnectru.netlify.app/)
+- 🔭 I’m currently volunteering on project [RCONNECT](https://rconnectru.netlify.app/)
 
 - 🌱 I’m currently learning **React, Vue and everything related to it**
 
