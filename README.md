@@ -13,6 +13,8 @@
 <p align="left">
 <a href="https://instagram.com/kh.khisrav" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="kh.khisrav" height="30" width="40" /></a>
 <a href="https://codeforces.com/profile/khisrav" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" alt="khisrav" height="30" width="40" /></a>
+  <a href="https://t.me/kh_tj" target="blank"><img align="center" src="https://raw.githubusercontent.com/daniilshat/daniilshat/2d7eafe5250314b3d422c86b35de062e0f1f5178/icons/Telegram.svg" alt="kh_tj" height="40" width="40" /></a>
+</a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
