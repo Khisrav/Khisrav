@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Khisrav</h1>
-<h3 align="center">A passionate frontend developer</h3>
+<h3 align="center">A passionate Software Engineer</h3>
 
-- 🌱 I’m currently learning **React, Vue and everything related to it**
+- 🌱 I’m currently learning **React, Vue, Laravel and everything related to it**
 
 - 📫 Reach me here **https://t.me/kh_tj**
 
