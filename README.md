@@ -1,4 +1,4 @@
-<h2 align="left">Just random dude</h2>
+<h2 align="left">Just a random dude</h2>
 
 ###
 
