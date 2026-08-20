@@ -38,11 +38,15 @@ function formatDate(d: Date) {
       <div class="hidden h-4 w-px bg-white/10 sm:block" />
 
       <div class="flex min-w-0 items-center gap-2 px-0.5">
-        <span
-          class="grid size-6 place-items-center rounded-full bg-white/12 text-[10px] font-semibold text-ink"
-        >
-          {{ profile.name.slice(0, 1) }}
-        </span>
+        <img
+          :src="profile.avatar"
+          :alt="profile.fullName"
+          width="24"
+          height="24"
+          class="size-6 rounded-full object-cover ring-1 ring-white/15"
+          loading="lazy"
+          decoding="async"
+        />
         <p class="truncate text-sm font-medium tracking-tight">{{ profile.name }}</p>
       </div>
 

@@ -5,9 +5,9 @@ import { skills } from '@/data/content'
 <template>
   <div class="space-y-4 font-sans">
     <div>
-      <p class="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Skills</p>
-      <h2 class="mt-1 text-xl font-bold tracking-tight">Loadout</h2>
-      <p class="mt-1 text-sm text-ink-muted">What I reach for most days.</p>
+      <p class="text-xs font-medium uppercase tracking-[0.12em] text-ink-muted">Skills</p>
+      <h2 class="mt-1 text-xl font-semibold tracking-tight">Stack</h2>
+      <p class="mt-1 text-sm text-ink-muted">What I use on commercial projects.</p>
     </div>
 
     <div class="grid gap-3 sm:grid-cols-2">

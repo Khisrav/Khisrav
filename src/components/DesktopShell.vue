@@ -12,13 +12,22 @@ import SkillsWindow from '@/components/windows/SkillsWindow.vue'
 import { useDesktop, type WindowId } from '@/composables/useDesktop'
 import { deskApps } from '@/data/apps'
 
-const { windows, closingId, focus, open, close, minimize, move } = useDesktop()
+const { windows, closingId, focus, open, close, minimize, toggleMaximize, move, resize } =
+  useDesktop()
 
 const icons = deskApps as DeskIcon[]
 
 function isVisible(id: WindowId) {
   const w = windows[id]
   return w.open && !w.minimized
+}
+
+function onTerminalOpen(id: WindowId) {
+  if (id === 'welcome') {
+    focus('welcome')
+    return
+  }
+  open(id)
 }
 </script>
 
@@ -39,9 +48,11 @@ function isVisible(id: WindowId) {
         @focus="focus"
         @close="close"
         @minimize="minimize"
+        @maximize="toggleMaximize"
         @move="move"
+        @resize="resize"
       >
-        <TerminalWelcome />
+        <TerminalWelcome @exit="close('welcome')" @open="onTerminalOpen" />
       </WindowShell>
 
       <WindowShell
@@ -51,7 +62,9 @@ function isVisible(id: WindowId) {
         @focus="focus"
         @close="close"
         @minimize="minimize"
+        @maximize="toggleMaximize"
         @move="move"
+        @resize="resize"
       >
         <AboutWindow />
       </WindowShell>
@@ -63,7 +76,9 @@ function isVisible(id: WindowId) {
         @focus="focus"
         @close="close"
         @minimize="minimize"
+        @maximize="toggleMaximize"
         @move="move"
+        @resize="resize"
       >
         <PortfolioWindow />
       </WindowShell>
@@ -75,7 +90,9 @@ function isVisible(id: WindowId) {
         @focus="focus"
         @close="close"
         @minimize="minimize"
+        @maximize="toggleMaximize"
         @move="move"
+        @resize="resize"
       >
         <ContactsWindow />
       </WindowShell>
@@ -87,7 +104,9 @@ function isVisible(id: WindowId) {
         @focus="focus"
         @close="close"
         @minimize="minimize"
+        @maximize="toggleMaximize"
         @move="move"
+        @resize="resize"
       >
         <SkillsWindow />
       </WindowShell>

@@ -5,6 +5,8 @@ import vue from '@vitejs/plugin-vue'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
+  // User site at https://khisrav.github.io (repo: khisrav.github.io)
+  base: '/',
   plugins: [vue(), tailwindcss()],
   resolve: {
     alias: {

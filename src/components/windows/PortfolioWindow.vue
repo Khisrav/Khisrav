@@ -11,17 +11,13 @@ const statusLabel: Record<Project['status'], string> = {
 <template>
   <div class="space-y-4 font-sans">
     <div>
-      <p class="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">Portfolio</p>
-      <h2 class="mt-1 text-xl font-bold tracking-tight">Selected work</h2>
-      <p class="mt-1 text-sm text-ink-muted">Things I've been building and polishing.</p>
+      <p class="text-xs font-medium uppercase tracking-[0.12em] text-ink-muted">Portfolio</p>
+      <h2 class="mt-1 text-xl font-semibold tracking-tight">Selected work</h2>
+      <p class="mt-1 text-sm text-ink-muted">Commercial and personal projects.</p>
     </div>
 
     <ul class="space-y-3">
-      <li
-        v-for="project in projects"
-        :key="project.id"
-        class="glass-soft rounded-xl p-3.5"
-      >
+      <li v-for="project in projects" :key="project.id" class="glass-soft rounded-xl p-3.5">
         <div class="flex items-start justify-between gap-3">
           <div>
             <h3 class="text-[15px] font-semibold tracking-tight">{{ project.name }}</h3>
@@ -47,15 +43,26 @@ const statusLabel: Record<Project['status'], string> = {
             {{ tag }}
           </span>
         </div>
-        <a
-          v-if="project.href"
-          :href="project.href"
-          target="_blank"
-          rel="noreferrer"
-          class="mt-3 inline-flex text-sm font-semibold text-primary underline-offset-4 hover:underline"
-        >
-          Open →
-        </a>
+        <div class="mt-3 flex flex-wrap gap-3 text-sm font-semibold">
+          <a
+            v-if="project.href"
+            :href="project.href"
+            target="_blank"
+            rel="noreferrer"
+            class="text-primary underline-offset-4 hover:underline"
+          >
+            Open site →
+          </a>
+          <a
+            v-if="project.repo"
+            :href="project.repo"
+            target="_blank"
+            rel="noreferrer"
+            class="text-ink-muted underline-offset-4 hover:text-ink hover:underline"
+          >
+            GitHub →
+          </a>
+        </div>
       </li>
     </ul>
   </div>

@@ -36,6 +36,11 @@ function goHome() {
   }, 200)
 }
 
+function onTerminalOpen(id: WindowId) {
+  if (id === 'welcome') return
+  openApp(id)
+}
+
 const activeTitle = computed(() => (activeId.value ? appTitles[activeId.value] : ''))
 </script>
 
@@ -55,7 +60,11 @@ const activeTitle = computed(() => (activeId.value ? appTitles[activeId.value] :
       :closing="closing"
       @back="goHome"
     >
-      <TerminalWelcome v-if="activeId === 'welcome'" />
+      <TerminalWelcome
+        v-if="activeId === 'welcome'"
+        @exit="goHome"
+        @open="onTerminalOpen"
+      />
       <AboutWindow v-else-if="activeId === 'about'" />
       <PortfolioWindow v-else-if="activeId === 'portfolio'" />
       <ContactsWindow v-else-if="activeId === 'contacts'" />
