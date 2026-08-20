@@ -1,0 +1,113 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-surface: #14131a;
+  --color-surface-bright: #262430;
+  --color-ink: #ece8f0;
+  --color-ink-muted: #a8a0b4;
+  --color-primary: #d4a5c0;
+  --color-primary-container: #6b3a52;
+  --color-secondary: #a8a4d4;
+  --color-secondary-container: #3d3a68;
+  --color-tertiary: #7db8a8;
+  --color-tertiary-container: #1f5548;
+  --color-outline: color-mix(in oklab, white 12%, transparent);
+  --color-warn: #d4b88a;
+  --color-ok: #8fc9a8;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #app {
+    height: 100%;
+    height: 100dvh;
+    margin: 0;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-surface);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    touch-action: manipulation;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 35%, transparent);
+    color: var(--color-ink);
+  }
+
+  button,
+  a,
+  [role='button'] {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: color-mix(in oklab, #24202e 72%, transparent);
+    backdrop-filter: blur(18px) saturate(1.1);
+    -webkit-backdrop-filter: blur(18px) saturate(1.1);
+    border: 1px solid color-mix(in oklab, white 12%, transparent);
+    box-shadow: 0 12px 32px color-mix(in oklab, black 28%, transparent);
+  }
+
+  .glass-soft {
+    background: color-mix(in oklab, #2a2634 55%, transparent);
+    border: 1px solid color-mix(in oklab, white 10%, transparent);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sink-out {
+  to {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.anim-rise {
+  animation: rise-in 0.22s ease-out both;
+}
+
+.anim-sink {
+  animation: sink-out 0.18s ease-in both;
+}
+
+.cursor-blink {
+  animation: blink 1.05s step-end infinite;
+}
